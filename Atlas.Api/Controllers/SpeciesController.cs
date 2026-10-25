@@ -16,14 +16,14 @@ namespace Atlas.Api.Controllers
             _context = context;
         }
 
-        // GET: api/species
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Species>>> GetSpecies()
         {
             return await _context.Species.ToListAsync();
         }
 
-        // POST: api/species
+       
         [HttpPost]
         public async Task<ActionResult<Species>> CreateSpecies(Species species)
         {
