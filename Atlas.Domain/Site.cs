@@ -5,20 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Atlas.Domain
+namespace Atlas.Domain.Entities
 {
     public class Site
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public string Description { get; set; } = string.Empty;
-        public int YearsAgo { get; set; }
-
-        public double Latitude { get; set; } 
-        public double Longitude { get; set; } 
-     
-
-        public Guid SpeciesId { get; set; }
-        public Species Species { get; set; } = null!;
+        public string Location { get; set; } = string.Empty;
+        public string Age { get; set; } = string.Empty;
+        public string Species { get; set; } = string.Empty;
+        public string? AlternativeTaxonomy { get; set; }
     }
 }

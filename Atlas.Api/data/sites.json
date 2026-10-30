@@ -3,24 +3,32 @@
     "id": 1,
     "name": "Koobi Fora",
     "location": "Kenya",
-    "age": "About 1.6 million ya."
+    "age": "About 1.6 million ya.",
+    "species": "Homo ergaster",
+    "alternativeTaxonomy": "Classic Homo ergaster site; often classified under Homo erectus sensu lato."
   },
   {
     "id": 2,
     "name": "Ubeidiya",
     "location": "Israel",
-    "age": "About 1.7 million ya."
+    "age": "About 1.7 million ya.",
+    "species": "Homo erectus",
+    "alternativeTaxonomy": "Early Eurasian migration site; hominin remains and Acheulean tools are closely associated with Homo ergaster."
   },
   {
     "id": 3,
     "name": "Dmanisi",
     "location": "Georgia",
-    "age": "About 1.77 million ya."
+    "age": "About 1.77 million ya.",
+    "species": "Homo erectus",
+    "alternativeTaxonomy": "Also classified as Homo georgicus or a transitional form of African/Eurasian Homo ergaster."
   },
   {
     "id": 4,
     "name": "Mojokerto child",
     "location": "Indonesia",
-    "age": "About 1.45 million ya."
+    "age": "About 1.45 million ya.",
+    "species": "Homo erectus",
+    "alternativeTaxonomy": "Early Asian Homo erectus; direct descendant of the early Homo ergaster Out of Africa I dispersal."
   }
 ]
