@@ -29,7 +29,7 @@ using (var scope = app.Services.CreateScope())
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "Помилка під час автоматичного заповнення бази даних.");
+        logger.LogError(ex, "An error occurred during automatic database seeding.");
     }
 }
 

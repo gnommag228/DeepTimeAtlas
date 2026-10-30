@@ -1,16 +1,26 @@
 [
   {
     "id": 1,
-    "name": "Денисова пещера",
-    "location": "Алтай, Россия",
-    "age": 280000
+    "name": "Koobi Fora",
+    "location": "Kenya",
+    "age": "About 1.6 million ya."
   },
-
-
   {
     "id": 2,
-    "name": "Джебель-Ируд",
-    "location": "Марокко",
-    "age": 300000
+    "name": "Ubeidiya",
+    "location": "Israel",
+    "age": "About 1.7 million ya."
+  },
+  {
+    "id": 3,
+    "name": "Dmanisi",
+    "location": "Georgia",
+    "age": "About 1.77 million ya."
+  },
+  {
+    "id": 4,
+    "name": "Mojokerto child",
+    "location": "Indonesia",
+    "age": "About 1.45 million ya."
   }
 ]
