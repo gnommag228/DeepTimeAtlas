@@ -10,27 +10,38 @@ namespace Atlas.Api.Services
     {
         public static async Task SeedAsync(AtlasDbContext context, IWebHostEnvironment env)
         {
-      
             await context.Database.MigrateAsync();
 
-          
             var options = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             };
 
-        
+            
             if (!await context.Species.AnyAsync())
             {
                 var speciesPath = GetFilePath(env, "species.json");
                 if (File.Exists(speciesPath))
                 {
                     var json = await File.ReadAllTextAsync(speciesPath);
-                    var species = JsonSerializer.Deserialize<List<Species>>(json, options);
-                    if (species != null && species.Count > 0)
+                    try
                     {
-                        await context.Species.AddRangeAsync(species);
-                        await context.SaveChangesAsync();
+                        var species = JsonSerializer.Deserialize<List<Species>>(json, options);
+                        if (species != null && species.Count > 0)
+                        {
+                            await context.Species.AddRangeAsync(species);
+                            await context.SaveChangesAsync();
+                        }
+                    }
+                    catch (JsonException)
+                    {
+                       
+                        var singleSpecies = JsonSerializer.Deserialize<Species>(json, options);
+                        if (singleSpecies != null)
+                        {
+                            context.Species.Add(singleSpecies);
+                            await context.SaveChangesAsync();
+                        }
                     }
                 }
             }
@@ -51,18 +62,30 @@ namespace Atlas.Api.Services
                 }
             }
 
-         
+            
             if (!await context.Artifacts.AnyAsync())
             {
                 var artifactsPath = GetFilePath(env, "artifacts.json");
                 if (File.Exists(artifactsPath))
                 {
                     var json = await File.ReadAllTextAsync(artifactsPath);
-                    var artifacts = JsonSerializer.Deserialize<List<Artifact>>(json, options);
-                    if (artifacts != null && artifacts.Count > 0)
+                    try
                     {
-                        await context.Artifacts.AddRangeAsync(artifacts);
-                        await context.SaveChangesAsync();
+                        var artifacts = JsonSerializer.Deserialize<List<Artifact>>(json, options);
+                        if (artifacts != null && artifacts.Count > 0)
+                        {
+                            await context.Artifacts.AddRangeAsync(artifacts);
+                            await context.SaveChangesAsync();
+                        }
+                    }
+                    catch (JsonException)
+                    {
+                        var singleArtifact = JsonSerializer.Deserialize<Artifact>(json, options);
+                        if (singleArtifact != null)
+                        {
+                            context.Artifacts.Add(singleArtifact);
+                            await context.SaveChangesAsync();
+                        }
                     }
                 }
             }
@@ -70,14 +93,12 @@ namespace Atlas.Api.Services
 
         private static string GetFilePath(IWebHostEnvironment env, string fileName)
         {
-         
             var path = Path.Combine(env.ContentRootPath, "..", "data", fileName);
             if (File.Exists(path))
             {
                 return path;
             }
 
-          
             return Path.Combine(env.ContentRootPath, "data", fileName);
         }
     }

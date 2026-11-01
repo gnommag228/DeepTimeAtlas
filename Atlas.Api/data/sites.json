@@ -25,10 +25,19 @@
   },
   {
     "id": 4,
-    "name": "Mojokerto child",
+    "name": "Mojokerto",
     "location": "Indonesia",
     "age": "About 1.45 million ya.",
     "species": "Homo erectus",
     "alternativeTaxonomy": "Early Asian Homo erectus; direct descendant of the early Homo ergaster Out of Africa I dispersal."
+  },
+
+  {
+    "id": 5,
+    "name": "Ternifine",
+    "location": "Algeria",
+    "age": "About 700 thousand ya.",
+    "species": "Homo erectus",
+    "alternativeTaxonomy": "Originally described as Atlanthropus mauritanicus; often grouped within Homo heidelbergensis or African Homo erectus (sensu lato)."
   }
 ]

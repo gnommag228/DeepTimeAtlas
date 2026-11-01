@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Atlas.Api.Migrations
 {
     [DbContext(typeof(AtlasDbContext))]
-    [Migration("20261024225510_InitialArtifacts")]
-    partial class InitialArtifacts
+    [Migration("20261101212210_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,35 +51,34 @@ namespace Atlas.Api.Migrations
                     b.ToTable("Artifacts");
                 });
 
-            modelBuilder.Entity("Atlas.Domain.Site", b =>
+            modelBuilder.Entity("Atlas.Domain.Entities.Site", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("integer");
 
-                    b.Property<string>("Description")
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Age")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<double>("Latitude")
-                        .HasColumnType("double precision");
+                    b.Property<string>("AlternativeTaxonomy")
+                        .HasColumnType("text");
 
-                    b.Property<double>("Longitude")
-                        .HasColumnType("double precision");
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<Guid>("SpeciesId")
-                        .HasColumnType("uuid");
-
-                    b.Property<int>("YearsAgo")
-                        .HasColumnType("integer");
+                    b.Property<string>("Species")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("SpeciesId");
 
                     b.ToTable("Site");
                 });
@@ -109,17 +108,6 @@ namespace Atlas.Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Species");
-                });
-
-            modelBuilder.Entity("Atlas.Domain.Site", b =>
-                {
-                    b.HasOne("Atlas.Domain.Species", "Species")
-                        .WithMany()
-                        .HasForeignKey("SpeciesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Species");
                 });
 #pragma warning restore 612, 618
         }
