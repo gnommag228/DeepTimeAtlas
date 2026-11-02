@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-// Встроенный в .NET 10 генератор OpenAPI
+
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<AtlasDbContext>(options =>
@@ -15,7 +15,7 @@ builder.Services.AddDbContext<AtlasDbContext>(options =>
 
 var app = builder.Build();
 
-// Автоматический запуск сидера БД
+
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -32,11 +32,11 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-// Включаем эндпоинт OpenAPI и визуальный интерфейс Scalar
+
 app.MapOpenApi();
 app.MapScalarApiReference();
 
-// Автоматический переход с корня (/) на визуальный интерфейс
+
 app.MapGet("/", async context =>
 {
     context.Response.Redirect("/scalar/v1");
