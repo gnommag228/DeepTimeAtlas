@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    
     "name": "Koobi Fora",
     "location": "Kenya",
     "age": "About 1.6 million ya.",
@@ -9,7 +9,7 @@
   },
 
   {
-    "id": 2,
+    
     "name": "Ubeidiya",
     "location": "Israel",
     "age": "About 1.7 million ya.",
@@ -18,7 +18,7 @@
   },
 
   {
-    "id": 3,
+    
     "name": "Dmanisi",
     "location": "Georgia",
     "age": "About 1.77 million ya.",
@@ -27,7 +27,7 @@
   },
 
   {
-    "id": 4,
+    
     "name": "Mojokerto",
     "location": "Indonesia",
     "age": "About 1.45 million ya.",
@@ -36,7 +36,7 @@
   },
 
   {
-    "id": 5,
+    
     "name": "Ternifine",
     "location": "Algeria",
     "age": "About 700 thousand ya.",
@@ -45,7 +45,7 @@
   },
 
   {
-    "id": 6,
+    
     "name": "Buia",
     "location": "Eritrea",
     "age": "About 1 million ya.",
@@ -54,7 +54,7 @@
   },
 
   {
-    "id": 7,
+    
     "name": "Bouri",
     "location": "Ethiopia",
     "age": "About 1 million ya.",
@@ -63,8 +63,8 @@
   },
 
   {
-    "id": 8,
-    "name": "Mauer",//челюсть
+    
+    "name": "Mauer",
     "location": "Germany",
     "age": "About 700 thousand ya.",
     "species": "Homo heidelbergensis",
@@ -72,8 +72,8 @@
   },
 
   {
-    "id": 9,
-    "name": "Yunxian", // Два чрепа 
+    
+    "name": "Yunxian", 
     "location": "China",
     "age": "About 850 - 580 thousand ya.",
     "species": "Homo erectus",
@@ -81,7 +81,7 @@
   },
 
   {
-    "id": 10,
+    
     "name": "Lantian",
     "location": "China",
     "age": "About 0.75 - 1.15 million ya.",
@@ -90,7 +90,7 @@
   },
 
   {
-    "id": 11,
+    
     "name": "Peking Man (Zhoukoudian)",
     "location": "China",
     "age": "About 594 - 256 thousand ya.",
@@ -99,7 +99,7 @@
   },
 
   {
-    "id": 12,
+    
     "name": "Sangiran 17",
     "location": "Indonesia",
     "age": "About 0.7 - 1.15 million ya.",
@@ -108,7 +108,7 @@
   },
 
   {
-    "id": 13,
+    
     "name": "Trinil",
     "location": "Indonesia",
     "age": "About 830 - 500 thousand ya.",
@@ -117,7 +117,7 @@
   },
 
   {
-    "id": 14,
+    
     "name": "Olorgesailie",
     "location": "Kenya",
     "age": "About 900 - 970 thousand ya.",
@@ -126,7 +126,7 @@
   },
 
   {
-    "id": 15,
+    
     "name": "Konso",
     "location": "Ethiopia",
     "age": "About 1.7 - 1.4 - 1.0 million ya.",
@@ -135,7 +135,7 @@
   },
 
   {
-    "id": 16,
+    
     "name": "Gran Dolina",
     "location": "Spain",
     "age": "About 936 thousand ya.",
@@ -144,11 +144,11 @@
   },
 
   {
-    "id": 17,
+    
     "name": "Happisburgh",
     "location": "England",
     "age": "About 900 thousand ya.",
-    "species": "Homo antecessor / Early Homo heidelbergensis",
+    "species": "Homo heidelbergensis",
     "alternativeTaxonomy": "Earliest known human occupation site in Northern Europe; associated with early tool-makers, sometimes linked to Homo antecessor or ancestral European Homo heidelbergensis (sensu lato)."
   }
 

@@ -8,9 +8,9 @@ namespace Atlas.Api.Services
 {
     public static class DbSeeder
     {
-        public static async Task SeedAsync(AtlasDbContext context, IWebHostEnvironment env)
+          public static async Task SeedAsync(AtlasDbContext context, IWebHostEnvironment env)
         {
-            await context.Database.MigrateAsync();
+            //await context.Database.MigrateAsync();
 
             var options = new JsonSerializerOptions
             {
@@ -24,45 +24,55 @@ namespace Atlas.Api.Services
                 if (File.Exists(speciesPath))
                 {
                     var json = await File.ReadAllTextAsync(speciesPath);
-                    try
+                    var speciesList = JsonSerializer.Deserialize<List<Species>>(json, options);
+                    if (speciesList != null && speciesList.Count > 0)
                     {
-                        var species = JsonSerializer.Deserialize<List<Species>>(json, options);
-                        if (species != null && species.Count > 0)
-                        {
-                            await context.Species.AddRangeAsync(species);
-                            await context.SaveChangesAsync();
-                        }
-                    }
-                    catch (JsonException)
-                    {
-                       
-                        var singleSpecies = JsonSerializer.Deserialize<Species>(json, options);
-                        if (singleSpecies != null)
-                        {
-                            context.Species.Add(singleSpecies);
-                            await context.SaveChangesAsync();
-                        }
-                    }
-                }
-            }
-
-           
-            if (!await context.Site.AnyAsync())
-            {
-                var sitesPath = GetFilePath(env, "sites.json");
-                if (File.Exists(sitesPath))
-                {
-                    var json = await File.ReadAllTextAsync(sitesPath);
-                    var sites = JsonSerializer.Deserialize<List<Site>>(json, options);
-                    if (sites != null && sites.Count > 0)
-                    {
-                        await context.Site.AddRangeAsync(sites);
-                        await context.SaveChangesAsync();
+                        await context.Species.AddRangeAsync(speciesList);
+                        await context.SaveChangesAsync(); 
                     }
                 }
             }
 
             
+            var sitesPath = GetFilePath(env, "sites.json");
+            if (File.Exists(sitesPath))
+            {
+                var json = await File.ReadAllTextAsync(sitesPath);
+                var siteDtos = JsonSerializer.Deserialize<List<SiteJsonDto>>(json, options);
+
+                if (siteDtos != null && siteDtos.Count > 0)
+                {
+                    var existingSiteNames = await context.Site
+                        .Select(s => s.Name)
+                        .ToListAsync();
+
+                    
+                    var allSpecies = await context.Species.ToListAsync();
+
+                    foreach (var dto in siteDtos.Where(s => !existingSiteNames.Contains(s.Name)))
+                    {
+                        
+                        var matchedSpecies = allSpecies.FirstOrDefault(sp =>
+                            sp.Name.Equals(dto.Species, StringComparison.OrdinalIgnoreCase));
+
+                        var site = new Site
+                        {
+                            Name = dto.Name,
+                            Location = dto.Location,
+                            Age = dto.Age,
+                            
+                            SpeciesId = matchedSpecies != null ? matchedSpecies.Id : 1,
+                            AlternativeTaxonomy = dto.AlternativeTaxonomy
+                        };
+
+                        await context.Site.AddAsync(site);
+                    }
+
+                    await context.SaveChangesAsync();
+                }
+            }
+
+
             if (!await context.Artifacts.AnyAsync())
             {
                 var artifactsPath = GetFilePath(env, "artifacts.json");
@@ -101,5 +111,15 @@ namespace Atlas.Api.Services
 
             return Path.Combine(env.ContentRootPath, "data", fileName);
         }
+
     }
+    public class SiteJsonDto
+    {
+        public string Name { get; set; } = string.Empty;
+        public string Location { get; set; } = string.Empty;
+        public string Age { get; set; } = string.Empty;
+        public string Species { get; set; } = string.Empty;
+        public string? AlternativeTaxonomy { get; set; }
+    }
+
 }

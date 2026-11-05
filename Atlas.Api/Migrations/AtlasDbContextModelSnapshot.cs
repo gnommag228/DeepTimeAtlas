@@ -71,20 +71,23 @@ namespace Atlas.Api.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Species")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("SpeciesId")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("SpeciesId");
 
                     b.ToTable("Site");
                 });
 
             modelBuilder.Entity("Atlas.Domain.Species", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ColorHex")
                         .IsRequired()
@@ -105,6 +108,17 @@ namespace Atlas.Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Species");
+                });
+
+            modelBuilder.Entity("Atlas.Domain.Entities.Site", b =>
+                {
+                    b.HasOne("Atlas.Domain.Species", "Species")
+                        .WithMany()
+                        .HasForeignKey("SpeciesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Species");
                 });
 #pragma warning restore 612, 618
         }

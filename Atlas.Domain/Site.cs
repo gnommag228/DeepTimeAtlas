@@ -13,7 +13,8 @@ namespace Atlas.Domain.Entities
         public string Name { get; set; } = string.Empty;
         public string Location { get; set; } = string.Empty;
         public string Age { get; set; } = string.Empty;
-        public string Species { get; set; } = string.Empty;
+        public int SpeciesId { get; set; }
+        public Species? Species { get; set; }
         public string? AlternativeTaxonomy { get; set; }
     }
 }
