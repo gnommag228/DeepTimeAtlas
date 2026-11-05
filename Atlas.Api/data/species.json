@@ -1,11 +1,13 @@
 [
   {
+    "Id": 1,  
     "slug": "homo-erectus",
     "name": "Homo erectus",
     "description": "Early human species.",
     "colorHex": "#FF5733"
   },
   {
+    "Id": 2,
     "slug": "homo-heidelbergensis",
     "name": "Homo heidelbergensis",
     "description": "Extinct species of the genus Homo.",
@@ -13,6 +15,7 @@
   },
 
   {
+    "Id": 3,
     "slug": "homo-ergaster",
     "name": "Homo ergaster",
     "description": "Early African hominin species, often considered the African counterpart or direct ancestor of Asian Homo erectus.",

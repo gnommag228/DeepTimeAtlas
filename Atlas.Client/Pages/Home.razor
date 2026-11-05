@@ -1,7 +1,39 @@
 ﻿@page "/"
+@using Atlas.Domain.Entities
+@inject HttpClient Http
+@inject IJSRuntime JS
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Atlas Map</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="container-fluid py-3">
+    <h2 class="mb-3 fw-bold text-primary">Interactive Map of Human Evolution</h2>
 
-Welcome to your new app.
+    @if (sites == null)
+    {
+        <div class="spinner-border text-primary" role="status"></div>
+        <span class="ms-2">Loading map data...</span>
+    }
+    else
+    {
+        <div id="map" class="shadow rounded-4 border border-2" style="height: 75vh; width: 100%;"></div>
+    }
+</div>
+
+@code {
+    private List<Site>? sites;
+    private bool mapRendered = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        sites = await Http.GetFromJsonAsync<List<Site>>("api/sites");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (sites != null && !mapRendered)
+        {
+            mapRendered = true;
+            await JS.InvokeVoidAsync("loadMap", sites);
+        }
+    }
+}

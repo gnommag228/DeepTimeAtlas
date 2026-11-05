@@ -51,6 +51,8 @@ namespace Atlas.Api.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Location = table.Column<string>(type: "text", nullable: false),
+                    Latitude = table.Column<double>(type: "double precision", nullable: false),
+                    Longitude = table.Column<double>(type: "double precision", nullable: false),
                     Age = table.Column<string>(type: "text", nullable: false),
                     SpeciesId = table.Column<int>(type: "integer", nullable: false),
                     AlternativeTaxonomy = table.Column<string>(type: "text", nullable: true)
