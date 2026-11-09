@@ -28,6 +28,26 @@ namespace Atlas.Api.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Site",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Location = table.Column<string>(type: "text", nullable: false),
+                    Latitude = table.Column<double>(type: "double precision", nullable: false),
+                    Longitude = table.Column<double>(type: "double precision", nullable: false),
+                    Age = table.Column<string>(type: "text", nullable: false),
+                    ImageUrl = table.Column<string>(type: "text", nullable: true),
+                    SpeciesId = table.Column<int>(type: "integer", nullable: false),
+                    AlternativeTaxonomy = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Site", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Species",
                 columns: table => new
                 {
@@ -42,36 +62,6 @@ namespace Atlas.Api.Migrations
                 {
                     table.PrimaryKey("PK_Species", x => x.Id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Site",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Location = table.Column<string>(type: "text", nullable: false),
-                    Latitude = table.Column<double>(type: "double precision", nullable: false),
-                    Longitude = table.Column<double>(type: "double precision", nullable: false),
-                    Age = table.Column<string>(type: "text", nullable: false),
-                    SpeciesId = table.Column<int>(type: "integer", nullable: false),
-                    AlternativeTaxonomy = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Site", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Site_Species_SpeciesId",
-                        column: x => x.SpeciesId,
-                        principalTable: "Species",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Site_SpeciesId",
-                table: "Site",
-                column: "SpeciesId");
         }
 
         /// <inheritdoc />

@@ -1,0 +1,95 @@
+﻿@page "/site/{Id:int}"
+@using Atlas.Domain.Entities
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<PageTitle>@(site?.Name ?? "Site Details") - Human Evolution Atlas</PageTitle>
+
+<div class="container my-5" style="max-width: 950px;">
+   
+    <button class="btn btn-outline-secondary mb-4 px-4 py-2 rounded-pill shadow-sm" @onclick="GoBack">
+        ← Back to Map
+    </button>
+
+    @if (site == null)
+    {
+        <div class="text-center py-5">
+            <div class="spinner-border text-primary" role="status"></div>
+            <p class="mt-3 text-muted">Loading site details...</p>
+        </div>
+    }
+    else
+    {
+        
+        <div class="card border-0 shadow-lg overflow-hidden rounded-4">
+            <div class="row g-0 align-items-stretch">
+                
+                @if (!string.IsNullOrEmpty(site.ImageUrl))
+                {
+                   
+                    <div class="col-md-5 bg-light d-flex align-items-center justify-content-center p-3">
+                        <img src="@site.ImageUrl" 
+                             class="img-fluid rounded-3 shadow-sm" 
+                             alt="@site.Name" 
+                             style="max-height: 380px; width: 100%; object-fit: cover; object-position: center;" />
+                    </div>
+                }
+
+               
+                <div class="@(!string.IsNullOrEmpty(site.ImageUrl) ? "col-md-7" : "col-12")">
+                    <div class="card-body p-4 p-md-5 d-flex flex-column justify-content-between h-100">
+                        <div>
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <span class="badge bg-primary-subtle text-primary px-3 py-2 fs-6 rounded-pill">
+                                     @site.Age
+                                </span>
+                            </div>
+
+                            <h1 class="card-title fw-bold text-dark mb-1">@site.Name</h1>
+                            <p class="text-muted fs-5 mb-4"> @site.Location</p>
+
+                            <hr class="my-4 opacity-10" />
+
+                            @if (!string.IsNullOrEmpty(site.AlternativeTaxonomy))
+                            {
+                                <div class="mb-4">
+                                    <h6 class="text-uppercase text-secondary fw-bold fs-7 tracking-wide mb-2">
+                                        Taxonomy & Notes
+                                    </h6>
+                                    <p class="card-text text-body-secondary fs-6 leading-relaxed">
+                                        @site.AlternativeTaxonomy
+                                    </p>
+                                </div>
+                            }
+                        </div>
+
+                      
+                        <div class="pt-3">
+                            <button class="btn btn-outline-success btn-lg w-100 rounded-3 shadow-sm" disabled>
+                                🌍 View in Google Earth (Coming Soon)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Site? site;
+
+    protected override async Task OnInitializedAsync()
+    {
+        site = await Http.GetFromJsonAsync<Site>($"api/sites/{Id}");
+    }
+
+    private void GoBack()
+    {
+        Navigation.NavigateTo("/");
+    }
+}

@@ -61,7 +61,8 @@ namespace Atlas.Api.Services
                             Location = dto.Location,
                             Age = dto.Age,
                             Latitude = dto.Latitude,   
-                            Longitude = dto.Longitude, 
+                            Longitude = dto.Longitude,
+                            ImageUrl = dto.ImageUrl,
                             SpeciesId = matchedSpecies != null ? matchedSpecies.Id : 1,
                             AlternativeTaxonomy = dto.AlternativeTaxonomy
                         };
@@ -123,6 +124,7 @@ namespace Atlas.Api.Services
         public double Longitude { get; set; }  
         public string Species { get; set; } = string.Empty;
         public string? AlternativeTaxonomy { get; set; }
+        public string? ImageUrl { get; set; }
     }
 
 }

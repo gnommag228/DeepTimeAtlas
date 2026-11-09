@@ -63,6 +63,9 @@ namespace Atlas.Api.Migrations
                     b.Property<string>("AlternativeTaxonomy")
                         .HasColumnType("text");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("text");
+
                     b.Property<double>("Latitude")
                         .HasColumnType("double precision");
 
@@ -81,8 +84,6 @@ namespace Atlas.Api.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("SpeciesId");
 
                     b.ToTable("Site");
                 });
@@ -114,17 +115,6 @@ namespace Atlas.Api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Species");
-                });
-
-            modelBuilder.Entity("Atlas.Domain.Entities.Site", b =>
-                {
-                    b.HasOne("Atlas.Domain.Species", "Species")
-                        .WithMany()
-                        .HasForeignKey("SpeciesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Species");
                 });
 #pragma warning restore 612, 618
         }

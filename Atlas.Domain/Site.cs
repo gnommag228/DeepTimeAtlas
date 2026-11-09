@@ -15,8 +15,8 @@ namespace Atlas.Domain.Entities
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public string Age { get; set; } = string.Empty;
+        public string? ImageUrl { get; set; } 
         public int SpeciesId { get; set; }
-        public Species? Species { get; set; }
         public string? AlternativeTaxonomy { get; set; }
     }
 }
