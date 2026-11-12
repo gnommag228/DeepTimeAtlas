@@ -27,13 +27,15 @@ namespace Atlas.Api.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Site>> GetSite(int id)
         {
-            var site = await _context.Site.FindAsync(id);
+            var site = await _context.Site
+                .Include(s => s.Artifacts)
+                .FirstOrDefaultAsync(s => s.Id == id);
 
             if (site == null)
             {
                 return NotFound();
             }
-            
+
             return site;
         }
     }

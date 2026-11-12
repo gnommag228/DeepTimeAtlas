@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -12,21 +11,6 @@ namespace Atlas.Api.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Artifacts",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Title = table.Column<string>(type: "text", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false),
-                    Era = table.Column<string>(type: "text", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Artifacts", x => x.Id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Site",
                 columns: table => new
@@ -62,6 +46,36 @@ namespace Atlas.Api.Migrations
                 {
                     table.PrimaryKey("PK_Species", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Artifacts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Industry = table.Column<string>(type: "text", nullable: false),
+                    Material = table.Column<string>(type: "text", nullable: false),
+                    Age = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false),
+                    ImageUrl = table.Column<string>(type: "text", nullable: true),
+                    SiteId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Artifacts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Artifacts_Site_SiteId",
+                        column: x => x.SiteId,
+                        principalTable: "Site",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Artifacts_SiteId",
+                table: "Artifacts",
+                column: "SiteId");
         }
 
         /// <inheritdoc />
@@ -71,10 +85,10 @@ namespace Atlas.Api.Migrations
                 name: "Artifacts");
 
             migrationBuilder.DropTable(
-                name: "Site");
+                name: "Species");
 
             migrationBuilder.DropTable(
-                name: "Species");
+                name: "Site");
         }
     }
 }

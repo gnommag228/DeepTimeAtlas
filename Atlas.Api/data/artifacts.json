@@ -1,3 +1,238 @@
-{
+[
 
-}
+{
+  "SiteName": "Koobi Fora",
+  "Artifacts": [
+    {
+      "Name": "KBS Oldowan Choppers & Flakes",
+      "Industry": "Oldowan (Mode 1)",
+      "Material": "Basalt and Volcanic Lava",
+      "Age": "About 1.88 million ya.",
+      "Description": "Simple river-cobble choppers, polyhedrons, and sharp unretouched flakes used for carcass butchery.",
+      "ImageUrl":"https://upload.wikimedia.org/wikipedia/commons/8/87/Canto_tallado_2-Guelmim-Es_Semara.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled"
+    },
+    {
+      "Name": "Karari Industry Core Scrapers",
+      "Industry": "Developed Oldowan",
+      "Material": "Basalt",
+      "Age": "About 1.6 - 1.4 million ya.",
+      "Description": "Steep-edged core scrapers and heavy-duty stone tools representing a technological transition toward the Acheulean.",
+      "ImageUrl":"https://www.researchgate.net/profile/Deborah-Barsky-2/publication/322391172/figure/fig5/AS:668499320004630@1536394066749/Limestone-heavy-duty-scraper-morphotype-from-Barranco-Leon-Orce-Spain-Photos-by-J.jpg"
+    }
+  ]
+},
+  {
+    "SiteName": "Ubeidiya",
+    "Artifacts": [
+      {
+        "Name": "Ubeidiya Bifacial Handaxes & Picks",
+        "Industry": "Early Acheulean (Mode 2)",
+        "Material": "Basalt and Flint",
+        "Age": "About 1.5 - 1.4 million ya.",
+        "Description": "Crude bifacial handaxes and trihedral picks representing one of the earliest Acheulean assemblages outside Africa.",
+        "ImageUrl": null
+      },
+      {
+        "Name": "Limestone Spheroids",
+        "Industry": "Early Acheulean (Mode 2)",
+        "Material": "Limestone",
+        "Age": "About 1.5 million ya.",
+        "Description": "Faceted spherical stone balls shaped through percussion, likely used for pounding or processing plant and animal tissues.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Dmanisi",
+    "Artifacts": [
+      {
+        "Name": "Dmanisi Pebble Choppers & Flakes",
+        "Industry": "Oldowan / Mode 1",
+        "Material": "Local Basalt and Tuff",
+        "Age": "About 1.77 million ya.",
+        "Description": "Over 1,000 primitive pebble cores, choppers, and sharp cutting flakes pre-dating Acheulean handaxe technology.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Mojokerto",
+    "Artifacts": []
+  },
+  {
+    "SiteName": "Ternifine",
+    "Artifacts": [
+      {
+        "Name": "Ternifine Acheulean Handaxes",
+        "Industry": "Acheulean (Mode 2)",
+        "Material": "Quartzite and Sandstone",
+        "Age": "About 700 thousand ya.",
+        "Description": "Large bifacially flaked handaxes recovered directly alongside the Tighennif hominin mandibles.",
+        "ImageUrl": null
+      },
+      {
+        "Name": "Broad-Edged Cleavers",
+        "Industry": "Acheulean (Mode 2)",
+        "Material": "Quartzite and Limestone",
+        "Age": "About 700 thousand ya.",
+        "Description": "Heavy-duty cutting tools with a wide, unretouched transverse bit, characteristic of North African Acheulean industries.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Buia",
+    "Artifacts": [
+      {
+        "Name": "Danakil Basin Acheulean & Mode 1 Tools",
+        "Industry": "Acheulean (Mode 2) & Mode 1",
+        "Material": "Basalt, Quartz, and Rhyolite",
+        "Age": "About 1 million ya.",
+        "Description": "Bifacial handaxes and cleavers co-occurring with simpler core-and-flake tools near ancient lacustrine deposits.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Bouri",
+    "Artifacts": [
+      {
+        "Name": "Daka Member Early Acheulean Bifaces",
+        "Industry": "Early Acheulean (Mode 2)",
+        "Material": "Basalt and Obsidian",
+        "Age": "About 1 million ya.",
+        "Description": "Early Acheulean handaxes and cleavers associated with cut-marked bovid and hippopotamus bones.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Mauer",
+    "Artifacts": []
+  },
+  {
+    "SiteName": "Yunxian",
+    "Artifacts": [
+      {
+        "Name": "Quyuanhekou Cobble Tools & Flakes",
+        "Industry": "Mode 1 (Core-and-Flake)",
+        "Material": "Quartz, Sandstone, and Igneous Cobbles",
+        "Age": "About 850 - 580 thousand ya.",
+        "Description": "Heavy-duty choppers, chopping tools, spheroids, and simple flakes manufactured from Han River cobbles.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Lantian",
+    "Artifacts": [
+      {
+        "Name": "Gongwangling Pebble Tools & Spheroids",
+        "Industry": "Mode 1 (Pebble-Tool Industry)",
+        "Material": "Quartzite and Vein Quartz",
+        "Age": "About 1.15 million ya.",
+        "Description": "Large unifacial choppers, heavy scrapers, pointed tools, and stone spheroids recovered from loess-paleosol sequences.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Peking Man (Zhoukoudian)",
+    "Artifacts": [
+      {
+        "Name": "Bipolar Vein-Quartz Scrapers & Points",
+        "Industry": "Mode 1 (Bipolar Core-and-Flake)",
+        "Material": "Vein Quartz, Rock Crystal, and Sandstone",
+        "Age": "About 594 - 256 thousand ya.",
+        "Description": "Tens of thousands of small retouched scrapers, points, and burins produced primarily using the bipolar anvil technique.",
+        "ImageUrl": null
+      },
+      {
+        "Name": "Ash Layers & Burned Bones",
+        "Industry": "Pyrotechnology / Fire Use",
+        "Material": "Charred Bone and Ash Deposits",
+        "Age": "About 500 - 300 thousand ya.",
+        "Description": "Thick accumulations of ash, burned hackberry seeds, and charred animal bones indicating controlled use of fire inside the cave.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Sangiran",
+    "Artifacts": [
+      {
+        "Name": "Sangiran Flake Industry",
+        "Industry": "Mode 1 (Small-Flake Industry)",
+        "Material": "Chalcedony, Jasper, and Silicified Wood",
+        "Age": "About 0.8 - 1.0 million ya.",
+        "Description": "Small retouched flakes, side-scrapers, and borers knapped from siliceous river pebbles in the Bapang (Kabuh) formation.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Trinil",
+    "Artifacts": [
+      {
+        "Name": "Trinil Engraved Pseudodon Shell",
+        "Industry": "Shell Tool & Early Engraving",
+        "Material": "Freshwater Mussel Shell (Pseudodon)",
+        "Age": "About 540 - 430 thousand ya.",
+        "Description": "Fossilized mussel shell featuring a deliberate geometric zig-zag engraving—the oldest known abstract engraving—alongside shells modified for cutting.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Olorgesailie",
+    "Artifacts": [
+      {
+        "Name": "Olorgesailie Acheulean Handaxe Assemblage",
+        "Industry": "Acheulean (Mode 2)",
+        "Material": "Trachyte Lava and Basalt",
+        "Age": "About 900 - 970 thousand ya.",
+        "Description": "Massive concentrations of finely symmetrical bifacial handaxes and cleavers discovered in ancient Rift Valley lake margins.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Konso",
+    "Artifacts": [
+      {
+        "Name": "Konso Early Acheulean Picks & Handaxes",
+        "Industry": "Early Acheulean (Mode 2)",
+        "Material": "Basalt and Quartz",
+        "Age": "About 1.75 - 1.4 million ya.",
+        "Description": "Some of the earliest known Acheulean large cutting tools, showing the transition from crude unifacial picks to refined bifacial handaxes.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Gran Dolina",
+    "Artifacts": [
+      {
+        "Name": "TD6 Mode 1 Flakes & Denticulates",
+        "Industry": "Mode 1 (Pre-Acheulean Core-and-Flake)",
+        "Material": "Neogene Chert, Quartzite, and Sandstone",
+        "Age": "About 936 thousand ya.",
+        "Description": "Over 200 simple knapped flakes, notches, and cores used for defleshing animal carcasses and processing cannibalized hominin remains.",
+        "ImageUrl": null
+      }
+    ]
+  },
+  {
+    "SiteName": "Happisburgh",
+    "Artifacts": [
+      {
+        "Name": "Happisburgh Site 3 Flint Cores & Flakes",
+        "Industry": "Mode 1 (Core-and-Flake)",
+        "Material": "Flint",
+        "Age": "About 850 - 950 thousand ya.",
+        "Description": "Around 78 sharp unretouched flint flakes, cores, and flake tools knapped from river-gravel cobbles in a boreal forest environment.",
+        "ImageUrl": null
+      }
+    ]
+  }
+]

@@ -6,7 +6,6 @@
 <PageTitle>@(site?.Name ?? "Site Details") - Human Evolution Atlas</PageTitle>
 
 <div class="container my-5" style="max-width: 950px;">
-   
     <button class="btn btn-outline-secondary mb-4 px-4 py-2 rounded-pill shadow-sm" @onclick="GoBack">
         ← Back to Map
     </button>
@@ -20,58 +19,89 @@
     }
     else
     {
-        
         <div class="card border-0 shadow-lg overflow-hidden rounded-4">
-            <div class="row g-0 align-items-stretch">
-                
+            <div class="row g-0">
                 @if (!string.IsNullOrEmpty(site.ImageUrl))
                 {
-                   
                     <div class="col-md-5 bg-light d-flex align-items-center justify-content-center p-3">
-                        <img src="@site.ImageUrl" 
-                             class="img-fluid rounded-3 shadow-sm" 
-                             alt="@site.Name" 
-                             style="max-height: 380px; width: 100%; object-fit: cover; object-position: center;" />
+                        <img src="@site.ImageUrl"
+                             class="img-fluid rounded-3 shadow-sm"
+                             alt="@site.Name"
+                             style="max-height: 350px; width: 100%; object-fit: cover; object-position: center;" />
                     </div>
                 }
 
-               
                 <div class="@(!string.IsNullOrEmpty(site.ImageUrl) ? "col-md-7" : "col-12")">
-                    <div class="card-body p-4 p-md-5 d-flex flex-column justify-content-between h-100">
-                        <div>
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <span class="badge bg-primary-subtle text-primary px-3 py-2 fs-6 rounded-pill">
-                                     @site.Age
-                                </span>
-                            </div>
+                    <div class="card-body p-4 p-md-5">
+                        <div class="mb-2">
+                            <span class="badge bg-primary-subtle text-primary px-3 py-2 fs-6 rounded-pill">
+                                ⏳ @site.Age
+                            </span>
+                        </div>
 
-                            <h1 class="card-title fw-bold text-dark mb-1">@site.Name</h1>
-                            <p class="text-muted fs-5 mb-4"> @site.Location</p>
+                        <h1 class="card-title fw-bold text-dark mb-1">@site.Name</h1>
+                        <p class="text-muted fs-5 mb-4">📍 @site.Location</p>
 
+                        @if (!string.IsNullOrEmpty(site.AlternativeTaxonomy))
+                        {
                             <hr class="my-4 opacity-10" />
-
-                            @if (!string.IsNullOrEmpty(site.AlternativeTaxonomy))
-                            {
-                                <div class="mb-4">
-                                    <h6 class="text-uppercase text-secondary fw-bold fs-7 tracking-wide mb-2">
-                                        Taxonomy & Notes
-                                    </h6>
-                                    <p class="card-text text-body-secondary fs-6 leading-relaxed">
-                                        @site.AlternativeTaxonomy
-                                    </p>
-                                </div>
-                            }
-                        </div>
-
-                      
-                        <div class="pt-3">
-                            <button class="btn btn-outline-success btn-lg w-100 rounded-3 shadow-sm" disabled>
-                                🌍 View in Google Earth (Coming Soon)
-                            </button>
-                        </div>
+                            <div>
+                                <h6 class="text-uppercase text-secondary fw-bold fs-7 tracking-wide mb-2">
+                                    Taxonomy & Notes
+                                </h6>
+                                <p class="card-text text-body-secondary fs-6 mb-0">
+                                    @site.AlternativeTaxonomy
+                                </p>
+                            </div>
+                        }
                     </div>
                 </div>
+            </div>
 
+            @if (site.Artifacts != null && site.Artifacts.Any())
+            {
+                <div class="border-top p-4 p-md-5 bg-white">
+                    <h6 class="text-uppercase text-secondary fw-bold fs-7 tracking-wide mb-3">
+                        Artifacts & Stone Tool Industries
+                    </h6>
+                    <div class="row g-3">
+                        @foreach (var artifact in site.Artifacts)
+                        {
+                            <div class="@(site.Artifacts.Count > 1 ? "col-md-6" : "col-12")">
+                                <div class="p-3 bg-light rounded-3 border h-100 d-flex flex-column justify-content-between">
+                                    <div>
+                                        <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-1">
+                                            <strong class="text-dark">@artifact.Name</strong>
+                                            <span class="badge bg-secondary-subtle text-secondary rounded-pill">
+                                                @artifact.Industry
+                                            </span>
+                                        </div>
+                                        <div class="small text-muted mb-2">
+                                            🪨 <strong>Material:</strong> @artifact.Material  |  ⏳ @artifact.Age
+                                        </div>
+                                        <p class="small text-body-secondary mb-2">@artifact.Description</p>
+                                    </div>
+
+                                    @if (!string.IsNullOrEmpty(artifact.ImageUrl))
+                                    {
+                                        <div class="bg-white rounded-2 mt-2 p-2 border d-flex align-items-center justify-content-center">
+                                            <img src="@artifact.ImageUrl"
+                                                 alt="@artifact.Name"
+                                                 class="img-fluid rounded-1"
+                                                 style="max-height: 240px; width: 100%; object-fit: contain;" />
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+
+            <div class="px-4 px-md-5 pb-4 pb-md-5 pt-2 bg-white">
+                <button class="btn btn-outline-success btn-lg w-100 rounded-3 shadow-sm" disabled>
+                    🌍 View in Google Earth (Coming Soon)
+                </button>
             </div>
         </div>
     }
