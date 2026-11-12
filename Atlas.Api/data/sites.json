@@ -32,144 +32,158 @@
     "ImageUrl": "https://atlasofhumanevolution.com/images/IconImages/Homo_Geo.JPG",
     "AlternativeTaxonomy": "Also classified as Homo georgicus or a transitional form of African/Eurasian Homo ergaster."
   },
-    {
-      "Id": 4,
-      "Name": "Mojokerto",
-      "Location": "Indonesia",
-      "Latitude": -7.471,
-      "Longitude": 112.433,
-      "Age": "About 1.45 million ya.",
-      "SpeciesId": 3,
-      "AlternativeTaxonomy": "Early Asian Homo erectus; direct descendant of the early Homo ergaster Out of Africa I dispersal."
-    },
-    {
-      "Id": 5,
-      "Name": "Ternifine",
-      "Location": "Algeria",
-      "Latitude": 35.416,
-      "Longitude": 0.333,
-      "Age": "About 700 thousand ya.",
-      "SpeciesId": 1,
-      "AlternativeTaxonomy": "Originally described as Atlanthropus mauritanicus; often grouped within Homo heidelbergensis or African Homo erectus (sensu lato)."
-    },
-    {
-      "Id": 6,
-      "Name": "Buia",
-      "Location": "Eritrea",
-      "Latitude": 14.850,
-      "Longitude": 39.883,
-      "Age": "About 1 million ya.",
-      "SpeciesId": 1,
-      "AlternativeTaxonomy": "Transition fossil often linked to early Homo heidelbergensis or African Homo erectus (sensu lato), sometimes associated with Danakil hominin variants."
-    },
-    {
-      "Id": 7,
-      "Name": "Bouri",
-      "Location": "Ethiopia",
-      "Latitude": 10.250,
-      "Longitude": 40.583,
-      "Age": "About 1 million ya.",
-      "SpeciesId": 3,
-      "AlternativeTaxonomy": "Key African Homo erectus (sensu lato) specimen bridging early H. ergaster and later Middle Pleistocene hominins; shares strong morphological affinities with Asian H. erectus and Buia."
-    },
-    {
-      "Id": 8,
-      "Name": "Mauer",
-      "Location": "Germany",
-      "Latitude": 49.341,
-      "Longitude": 8.798,
-      "Age": "About 700 thousand ya.",
-      "SpeciesId": 2,
-      "AlternativeTaxonomy": "Type specimen (holotype Mauer 1) of Homo heidelbergensis; alternatively classified as European Homo erectus heidelbergensis or archaic Homo sapiens."
-    },
-    {
-      "Id": 9,
-      "Name": "Yunxian",
-      "Location": "China",
-      "Latitude": 32.833,
-      "Longitude": 110.583,
-      "Age": "About 850 - 580 thousand ya.",
-      "SpeciesId": 1,
-      "AlternativeTaxonomy": "Show a mixture of features associated both with Homo erectus and with 'archaic H. sapiens'"
-    },
-    {
-      "Id": 10,
-      "Name": "Lantian",
-      "Location": "China",
-      "Latitude": 34.167,
-      "Longitude": 109.500,
-      "Age": "About 0.75 - 1.15 million ya.",
-      "SpeciesId": 1,
-      "AlternativeTaxonomy": "Subspecies Homo erectus lantianensis; originally described as Sinanthropus lantianensis; morphologically archaic East Asian Homo erectus with small cranial capacity."
-    },
-    {
-      "Id": 11,
-      "Name": "Peking Man (Zhoukoudian)",
-      "Location": "China",
-      "Latitude": 39.686,
-      "Longitude": 115.923,
-      "Age": "About 594 - 256 thousand ya.",
-      "SpeciesId": 1,
-      "AlternativeTaxonomy": "Subspecies Homo erectus pekinensis; originally described as Sinanthropus pekinensis; classic East Asian Homo erectus (sensu stricto) exemplar."
-    },
-    {
-      "Id": 12,
-      "Name": "Sangiran 17",
-      "Location": "Indonesia",
-      "Latitude": -7.450,
-      "Longitude": 110.833,
-      "Age": "About 0.7 - 1.15 million ya.",
-      "SpeciesId": 1,
-      "AlternativeTaxonomy": "Pithecanthropus erectus; classic East Asian Homo erectus (sensu stricto). Includes famous specimen Sangiran 17 (S17) — the most complete Javanese hominin cranium."
-    },
-    {
-      "Id": 13,
-      "Name": "Trinil",
-      "Location": "Indonesia",
-      "Latitude": -7.375,
-      "Longitude": 111.358,
-      "Age": "About 830 - 500 thousand ya.",
-      "SpeciesId": 1,
-      "AlternativeTaxonomy": "Originally described as Pithecanthropus erectus ('Java Man'); classic East Asian Homo erectus (sensu stricto). Associated with the Trinil 2 calotte specimen."
-    },
-    {
-      "Id": 14,
-      "Name": "Olorgesailie",
-      "Location": "Kenya",
-      "Latitude": -1.583,
-      "Longitude": 36.450,
-      "Age": "About 900 - 970 thousand ya.",
-      "SpeciesId": 1,
-      "AlternativeTaxonomy": "African Homo erectus (sensu lato); associated with advanced Acheulean technology and transitional mid-Pleistocene hominins, sometimes linked to early Homo heidelbergensis or regional African variants."
-    },
-    {
-      "Id": 15,
-      "Name": "Konso",
-      "Location": "Ethiopia",
-      "Latitude": 5.250,
-      "Longitude": 37.433,
-      "Age": "About 1.7 - 1.4 - 1.0 million ya.",
-      "SpeciesId": 1,
-      "AlternativeTaxonomy": "African Homo erectus (sensu lato) / Homo ergaster; crucial East African paleoanthropological site yielding robust hominin crania and early technological transitions."
-    },
-    {
-      "Id": 16,
-      "Name": "Gran Dolina",
-      "Location": "Spain",
-      "Latitude": 42.350,
-      "Longitude": -3.516,
-      "Age": "About 936 thousand ya.",
-      "SpeciesId": 2,
-      "AlternativeTaxonomy": "Also classified as Homo antecessor by discoverers; represents early European Homo heidelbergensis (sensu lato) or a regional transitional form from European Homo erectus."
-    },
-    {
-      "Id": 17,
-      "Name": "Happisburgh",
-      "Location": "England",
-      "Latitude": 52.827,
-      "Longitude": 1.532,
-      "Age": "About 900 thousand ya.",
-      "SpeciesId": 2,
-      "AlternativeTaxonomy": "Earliest known human occupation site in Northern Europe; associated with early tool-makers, sometimes linked to Homo antecessor or ancestral European Homo heidelbergensis (sensu lato)."
-    }
+  {
+    "Id": 4,
+    "Name": "Mojokerto",
+    "Location": "Indonesia",
+    "Latitude": -7.471,
+    "Longitude": 112.433,
+    "Age": "About 1.45 million ya.",
+    "SpeciesId": 3,
+    "ImageUrl": "https://antropogenez.ru/uploads/tx_fossils/modzho.jpg",
+    "AlternativeTaxonomy": "Early Asian Homo erectus; direct descendant of the early Homo ergaster Out of Africa I dispersal."
+  },
+  {
+    "Id": 5,
+    "Name": "Ternifine",
+    "Location": "Algeria",
+    "Latitude": 35.416,
+    "Longitude": 0.333,
+    "Age": "About 700 thousand ya.",
+    "SpeciesId": 1,
+    "ImageUrl": "https://antropogenez.ru/uploads/tx_fossils/DSCN6851.jpg",
+    "AlternativeTaxonomy": "Originally described as Atlanthropus mauritanicus; often grouped within Homo heidelbergensis or African Homo erectus (sensu lato)."
+  },
+  {
+    "Id": 6,
+    "Name": "Buia",
+    "Location": "Eritrea",
+    "Latitude": 14.850,
+    "Longitude": 39.883,
+    "Age": "About 1 million ya.",
+    "SpeciesId": 1,
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Buia_UA_31_NMNH.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail_unscaled&_=20240903063140",
+    "AlternativeTaxonomy": "Transition fossil often linked to early Homo heidelbergensis or African Homo erectus (sensu lato), sometimes associated with Danakil hominin variants."
+  },
+  {
+    "Id": 7,
+    "Name": "Bouri",
+    "Location": "Ethiopia",
+    "Latitude": 10.250,
+    "Longitude": 40.583,
+    "Age": "About 1 million ya.",
+    "SpeciesId": 3,
+    "ImageUrl": "https://antropogenez.ru/uploads/tx_fossils/bou-vp-12-130.jpg",
+    "AlternativeTaxonomy": "Key African Homo erectus (sensu lato) specimen bridging early H. ergaster and later Middle Pleistocene hominins; shares strong morphological affinities with Asian H. erectus and Buia."
+  },
+  {
+    "Id": 8,
+    "Name": "Mauer",
+    "Location": "Germany",
+    "Latitude": 49.341,
+    "Longitude": 8.798,
+    "Age": "About 700 thousand ya.",
+    "SpeciesId": 2,
+    "ImageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Heidelberger_Mensch_Replik_Rosensteinmuseum.jpg?utm_source=ru.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "AlternativeTaxonomy": "Type specimen (holotype Mauer 1) of Homo heidelbergensis; alternatively classified as European Homo erectus heidelbergensis or archaic Homo sapiens."
+  },
+  {
+    "Id": 9,
+    "Name": "Yunxian",
+    "Location": "China",
+    "Latitude": 32.833,
+    "Longitude": 110.583,
+    "Age": "About 850 - 580 thousand ya.",
+    "SpeciesId": 1,
+    "ImageUrl": "https://substackcdn.com/image/fetch/$s_!gkJi!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fde3d019f-ce0b-45c8-8667-d004e7d9e79a_2500x1250.heic",
+    "AlternativeTaxonomy": "Show a mixture of features associated both with Homo erectus and with 'archaic H. sapiens'"
+  },
+  {
+    "Id": 10,
+    "Name": "Lantian",
+    "Location": "China",
+    "Latitude": 34.167,
+    "Longitude": 109.500,
+    "Age": "About 0.75 - 1.15 million ya.",
+    "SpeciesId": 1,
+    "ImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Lantian_Man_IVPP.jpg/960px-Lantian_Man_IVPP.jpg?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "AlternativeTaxonomy": "Subspecies Homo erectus lantianensis; originally described as Sinanthropus lantianensis; morphologically archaic East Asian Homo erectus with small cranial capacity."
+  },
+  {
+    "Id": 11,
+    "Name": "Peking Man (Zhoukoudian)",
+    "Location": "China",
+    "Latitude": 39.686,
+    "Longitude": 115.923,
+    "Age": "About 594 - 256 thousand ya.",
+    "SpeciesId": 1,
+    "ImageUrl": "https://antropogenez.ru/uploads/tx_fossils/Sinantrop--rekonstrukcija-11.jpg",
+    "AlternativeTaxonomy": "Subspecies Homo erectus pekinensis; originally described as Sinanthropus pekinensis; classic East Asian Homo erectus (sensu stricto) exemplar."
+  },
+  {
+    "Id": 12,
+    "Name": "Sangiran",
+    "Location": "Indonesia",
+    "Latitude": -7.450,
+    "Longitude": 110.833,
+    "Age": "About 0.7 - 1.15 million ya.",
+    "SpeciesId": 1,
+    "ImageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Sangiran_17-02.JPG/1920px-Sangiran_17-02.JPG?utm_source=cs.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+    "AlternativeTaxonomy": "Pithecanthropus erectus; classic East Asian Homo erectus (sensu stricto). Includes famous specimen Sangiran 17 (S17) — the most complete Javanese hominin cranium."
+  },
+  {
+    "Id": 13,
+    "Name": "Trinil",
+    "Location": "Indonesia",
+    "Latitude": -7.375,
+    "Longitude": 111.358,
+    "Age": "About 830 - 500 thousand ya.",
+    "SpeciesId": 1,
+    "ImageUrl": "https://antropogenez.ru/uploads/tx_fossils/trinil.jpg",
+    "AlternativeTaxonomy": "Originally described as Pithecanthropus erectus ('Java Man'); classic East Asian Homo erectus (sensu stricto). Associated with the Trinil 2 calotte specimen."
+  },
+  {
+    "Id": 14,
+    "Name": "Olorgesailie",
+    "Location": "Kenya",
+    "Latitude": -1.583,
+    "Longitude": 36.450,
+    "Age": "About 900 - 970 thousand ya.",
+    "SpeciesId": 1,
+    "ImageUrl": "https://antropogenez.ru/uploads/tx_fossils/KNM-OL-45500-111111.jpg",
+    "AlternativeTaxonomy": "African Homo erectus (sensu lato); associated with advanced Acheulean technology and transitional mid-Pleistocene hominins, sometimes linked to early Homo heidelbergensis or regional African variants."
+  },
+  {
+    "Id": 15,
+    "Name": "Konso",
+    "Location": "Ethiopia",
+    "Latitude": 5.250,
+    "Longitude": 37.433,
+    "Age": "About 1.7 - 1.4 - 1.0 million ya.",
+    "SpeciesId": 1,
+    "ImageUrl": "https://cdn.mos.cms.futurecdn.net/S2myZyedVoChwVmP5RPw94-1200-80.jpg.webp",
+    "AlternativeTaxonomy": "African Homo erectus (sensu lato) / Homo ergaster; crucial East African paleoanthropological site yielding robust hominin crania and early technological transitions."
+  },
+  {
+    "Id": 16,
+    "Name": "Gran Dolina",
+    "Location": "Spain",
+    "Latitude": 42.350,
+    "Longitude": -3.516,
+    "Age": "About 936 thousand ya.",
+    "SpeciesId": 2,
+    "ImageUrl": "https://antropogenez.ru/uploads/tx_fossils/ATD_-_skelet.jpg",
+    "AlternativeTaxonomy": "Also classified as Homo antecessor by discoverers; represents early European Homo heidelbergensis (sensu lato) or a regional transitional form from European Homo erectus."
+  },
+  {
+    "Id": 17,
+    "Name": "Happisburgh",
+    "Location": "England",
+    "Latitude": 52.827,
+    "Longitude": 1.532,
+    "Age": "About 900 thousand ya.",
+    "SpeciesId": 2,
+    "ImageUrl": "https://archaeology.co.uk/wp-content/uploads/2014/02/Ashton-et-al.-Happisburgh-FIGURE-7.jpg",
+    "AlternativeTaxonomy": "Earliest known human occupation site in Northern Europe; associated with early tool-makers, sometimes linked to Homo antecessor or ancestral European Homo heidelbergensis (sensu lato)."
+  }
 ]
